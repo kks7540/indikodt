@@ -15,7 +15,6 @@
 			<param-value>true</param-value>
 		</init-param>
 	</filter>
-
 	<filter-mapping>
 		<filter-name>INDIKODTencodingFilter</filter-name>
 		<url-pattern>*.do</url-pattern>

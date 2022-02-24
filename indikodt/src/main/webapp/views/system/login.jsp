@@ -2,7 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@ page import="com.indi.kodt.core.spring.*"%>
 <html lang="kr">
 <head>
 	<meta name="autocomplete" content="off"/>
@@ -20,27 +19,13 @@
 	<script type="text/javascript" src="../../../resources/assets/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../../../resources/assets/js/nice-select/jquery.nice-select.min.js"></script>
 	<script type="text/javascript" src="../../../resources/assets/js/style.js"></script>
-
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="../../../js/system/js/login.js"></script>
 </head>
 <script type="text/javascript">
-/*
-=============================================
-비밀번호 입력 컴포넌트 포커스 이동.
-=============================================
- */
-function focusDown() {
-	$("#pw").focus();
-}
-/*
-=============================================
-로그인 처리.
-=============================================
- */
-function login(){
-	var frm = $("#loginFrm");
-	frm.attr("action", "<%=CustomDispatcherServlet.getContextPath()%>/login/loginService.do");
-	frm.submit();
-}
+$(function () {
+	login.init();
+});
 </script>
 <body>
   <div id="login_wrap">
@@ -52,11 +37,11 @@ function login(){
             <form id="loginFrm" action="#" method="post">
               <div class="row row_id">
                 <label for="id" class="blind">아이디 입력</label>
-                <input type="text" id="id" ref="id" name="memberId" placeholder="아이디를 입력해주세요." onKeyPress="if(event.keyCode==13)focusDown()" />
+                <input type="text" id="id" name="memberId" placeholder="아이디를 입력해주세요." onKeyPress="if(event.keyCode==13)focusDown()"/>
               </div>
               <div class="row row_pw">
                 <label for="pw" class="blind">비밀번호 입력</label>
-                <input type="password" id="pw" ref="pw" name="password" placeholder="비밀번호를 입력해주세요." onKeyPress="if(event.keyCode==13)login();" />
+                <input type="password" id="pw" name="password" placeholder="비밀번호를 입력해주세요." onKeyPress="if(event.keyCode==13)login();" />
               </div>
               <div class="checkbox txt">
                 <input type="checkbox" id="saveId" name="saveIdCheckbox" />
