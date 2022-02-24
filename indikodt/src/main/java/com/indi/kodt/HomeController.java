@@ -27,6 +27,6 @@ public class HomeController extends ParentMapper {
     List<Map<String, Object>> map = queryForList("stockDAO.selectStockList");
     model.addAttribute("serverTime", formattedDate);
     model.addAttribute("mapList", map.toString());
-    return "home";
+    return "common/login";
   }
 }
