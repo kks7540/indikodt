@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html lang="kr">
 <head>
 	<meta name="autocomplete" content="off"/>
@@ -9,6 +9,7 @@
 	<meta http-equiv="Cache-Control" content="No-Cache"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<title>개인택시공제조합</title>
+	<link rel="shortcut icon" href="../../resources/assets/images/icon/favicon.ico">
     <!-- stylesheet -->
     <link rel="stylesheet" href="../../resources/assets/css/common.css" type="text/css">
     <link rel="stylesheet" href="../../resources/assets/css/custom.css" type="text/css">
@@ -19,14 +20,34 @@
 	<script type="text/javascript" src="../../../resources/assets/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../../../resources/assets/js/nice-select/jquery.nice-select.min.js"></script>
 	<script type="text/javascript" src="../../../resources/assets/js/style.js"></script>
+	<script type="text/javascript" src="../../../resources/js/system/login.js"></script>
+	<script type="text/javascript" src="../../../resources/js/common/common.js"></script>
+    <!-- 외부js -->
     <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
-    <script src="../../../js/system/js/login.js"></script>
+	<% 
+		Cookie[] cookie = request.getCookies();
+		String userId = "";
+		if(cookie != null){
+			for(int i = 0; i<cookie.length;i++){
+				if(cookie[i].getName().trim().equals("userId")){
+					userId = cookie[i].getValue();
+				}
+			}
+		}
+	%>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log(Dns);
+			login.init();
+			var id = "<%=userId%>";
+			if(id==null||id==""){
+				$('input:checkbox[id="saveId"]').prop("checked", false);
+			}else{
+				$('input:checkbox[id="saveId"]').prop("checked", true);	
+			}
+		});
+	</script>
 </head>
-<script type="text/javascript">
-$(function () {
-	login.init();
-});
-</script>
 <body>
   <div id="login_wrap">
     <div id="container">
@@ -37,17 +58,17 @@ $(function () {
             <form id="loginFrm" action="#" method="post">
               <div class="row row_id">
                 <label for="id" class="blind">아이디 입력</label>
-                <input type="text" id="id" name="memberId" placeholder="아이디를 입력해주세요." onKeyPress="if(event.keyCode==13)focusDown()"/>
+                <input type="text" id="id" name="userId" placeholder="아이디를 입력해주세요."/>
               </div>
               <div class="row row_pw">
                 <label for="pw" class="blind">비밀번호 입력</label>
-                <input type="password" id="pw" name="password" placeholder="비밀번호를 입력해주세요." onKeyPress="if(event.keyCode==13)login();" />
+                <input type="password" id="pw" name="password" placeholder="비밀번호를 입력해주세요." />
               </div>
               <div class="checkbox txt">
                 <input type="checkbox" id="saveId" name="saveIdCheckbox" />
                 <label for="saveId">아이디 저장</label>
               </div>
-              <button type="button" class="btn_login" onclick="login()">
+              <button type="button" id="loginBtn" class="btn_login">
                 로그인
               </button>
             </form>

@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/indi/kodt/system/controller/systemController.java=UTF-8
+encoding//src/main/java/com/indi/kodt/system/view/systemView.java=UTF-8
+encoding//src/main/webapp/views/layout/header.jsp=UTF-8
 encoding//src/main/webapp/views/system/login.jsp=UTF-8

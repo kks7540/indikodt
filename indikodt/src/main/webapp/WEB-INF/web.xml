@@ -13,6 +13,7 @@
 		<init-param>
 			<param-name>forceEncoding</param-name>
 			<param-value>true</param-value>
+			<async-supported>true</async-supported>
 		</init-param>
 	</filter>
 	<filter-mapping>

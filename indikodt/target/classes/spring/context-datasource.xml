@@ -7,7 +7,9 @@
 
     <!-- DataSource -->
 	<bean id="basicDataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
-		<property name="targetDataSource" ref="dataSource-oracle" />
+		<property name="targetDataSource" ref="dataSource" />
 	</bean>
-	<jee:jndi-lookup id="dataSource-oracle" jndi-name="#{Properties['Globals.Basic.JndiName']}" resource-ref="true"></jee:jndi-lookup>
+   <jee:jndi-lookup id="dataSource"
+         jndi-name="jdbc/mysql"
+         expected-type="javax.sql.DataSource"/>
 </beans>

@@ -24,9 +24,7 @@ public class HomeController extends ParentMapper {
     Date date = new Date();
     DateFormat dateFormat = DateFormat.getDateTimeInstance(1, 1, locale);
     String formattedDate = dateFormat.format(date);
-    List<Map<String, Object>> map = queryForList("stockDAO.selectStockList");
     model.addAttribute("serverTime", formattedDate);
-    model.addAttribute("mapList", map.toString());
-    return "common/login";
+    return "system/login";
   }
 }
