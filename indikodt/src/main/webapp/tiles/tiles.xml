@@ -9,15 +9,16 @@
 	<definition name="tilesLayout" template="/views/system/main.jsp">
 		<put-attribute name="header" value="/views/layout/header.jsp" />
 		<put-attribute name="topnav" value="/views/layout/topnav.jsp" />
+		<put-attribute name="topmenu" value="/views/layout/topmenu.jsp" />
 		<put-attribute name="content" value="" />
 	</definition>
- 
+
 	<definition name="*.tiles" extends="tilesLayout">
 		<put-attribute name="content" value="/views/{1}.jsp" />
 	</definition>
-	
+
 	<definition name="*/*.tiles" extends="tilesLayout">
 		<put-attribute name="content" value="/views/{1}/{2}.jsp" />
 	</definition>
-	
+
 </tiles-definitions>

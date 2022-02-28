@@ -34,8 +34,8 @@ a{color:#333;text-decoration:none}
 body{color:#333;font-size:14px;font-family:'Noto Sans KR',Malgun Gothic,'맑은고딕',Dotum,'굴림',Gulim,Helvetica,sans-serif;letter-spacing:-0.5px}
 
 /***** component *****/
-.clearfix:after{content:'';display:block;clear:both}
-.clearfix > *{float:left}
+/***** .clearfix:after{content:'';display:block;clear:both} *****/
+/***** .clearfix > *{float:left} *****/
 .blind{position:absolute;top:-9999px;text-indent:-9999px}
 .no_after:after{display:none !important}
 .no_before:after{display:none !important}
@@ -373,3 +373,6 @@ body{color:#333;font-size:14px;font-family:'Noto Sans KR',Malgun Gothic,'맑은�
 /*** skipnav ***/
 #skipnav a{position:absolute;left:-3000%}
 #skipnav a:focus{display:block;top:0;left:0;width:100%;height:30px;color:#fff;line-height:30px;text-align:center;background-color:#039;z-index:10000000000}
+
+.logo_indi {display:block;line-height:50px;color:#e2e2e2}
+.logo_indi:hover { color:#8C8C8C }

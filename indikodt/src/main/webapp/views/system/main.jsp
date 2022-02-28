@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html lang="kr">
 <head>
-<tiles:insertAttribute name="header"/>
+<jsp:include page="../layout/header.jsp" flush="true"/>
 </head>
 <script type="text/javascript">
 $(function () {
@@ -12,13 +12,19 @@ $(function () {
 });
 </script>
 <body data-layout="horizontal" data-topbar="dark">
-<tiles:insertAttribute name="topnav" />
-  	<div class='wrap'>
-	  <div class='container'>  	
-  		<div class="contents clearfix">
-  			<tiles:insertAttribute name="content"/>
-  		</div>
-  	  </div>
-  	</div>
+	<div id="wrapper">
+		<header id="topnav">
+			<tiles:insertAttribute name="topnav" />
+		</header>
+
+
+		  <div class='container'>
+	  		<div class="contents clearfix">
+	  			<tiles:insertAttribute name="content"/>
+	  		</div>
+	  	  </div>
+
+	</div>
+
 </body>
 </html>
