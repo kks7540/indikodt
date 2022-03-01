@@ -10,15 +10,42 @@
 		<put-attribute name="header" value="/views/layout/header.jsp" />
 		<put-attribute name="topnav" value="/views/layout/topnav.jsp" />
 		<put-attribute name="topmenu" value="/views/layout/topmenu.jsp" />
-		<put-attribute name="content" value="" />
+		<put-attribute name="content1" value="" />
+		<put-attribute name="content2" value="" />
+		<put-attribute name="content3" value="" />
+		<put-attribute name="content4" value="" />
+		<put-attribute name="content5" value="" />
+		<put-attribute name="content6" value="" />
+		<put-attribute name="content7" value="" />
+		<put-attribute name="content8" value="" />
+		<put-attribute name="content9" value="" />
+		<put-attribute name="content10" value="" />
 	</definition>
 
 	<definition name="*.tiles" extends="tilesLayout">
-		<put-attribute name="content" value="/views/{1}.jsp" />
+		<put-attribute name="content1" value="/views/{1}.jsp" />
+		<put-attribute name="content2" value="/views/{1}.jsp" />
+		<put-attribute name="content3" value="/views/{1}.jsp" />
+		<put-attribute name="content4" value="/views/{1}.jsp" />
+		<put-attribute name="content5" value="/views/{1}.jsp" />
+		<put-attribute name="content6" value="/views/{1}.jsp" />
+		<put-attribute name="content7" value="/views/{1}.jsp" />
+		<put-attribute name="content8" value="/views/{1}.jsp" />
+		<put-attribute name="content9" value="/views/{1}.jsp" />
+		<put-attribute name="content10" value="/views/{1}.jsp" />
 	</definition>
 
 	<definition name="*/*.tiles" extends="tilesLayout">
-		<put-attribute name="content" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content1" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content2" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content3" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content4" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content5" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content6" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content7" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content8" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content9" value="/views/{1}/{2}.jsp" />
+		<put-attribute name="content10" value="/views/{1}/{2}.jsp" />
 	</definition>
 
 </tiles-definitions>

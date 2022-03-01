@@ -18,3 +18,7 @@ background-position: right 5% center;
 }
 /*** .customAfter{content:'';position:absolute;top:50%;right:10px;width:17px;height:17px;margin-top:-9px;border-radius:50%;background-color:#ccc;background-image:url(../images/common/arr_lnb.png);background-repeat:no-repeat;background-position:50% 50%}
 ***/
+.tap-icon01
+{
+	display: inline-block;width: 10px;height: 10px;font-size: 20px;line-height: 16px;
+}
