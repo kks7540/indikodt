@@ -9,7 +9,6 @@
 </head>
 <script type="text/javascript">
 $(function () {
-	//메인화면 js init
 	main.init();
 });
 </script>
@@ -20,32 +19,55 @@ $(function () {
 		</header>
 		<div class="card-body">
         <div id="basicwizard" class="basicwizard">
-            <ul id ="tabpages" class="nav nav-pills bg-light nav-justified form-wizard-header mb-4">
-                <li class="nav-item tab-header">
+            <ul class="nav nav-pills bg-light nav-justified form-wizard-header mb-4">
+                <li class="nav-item">
                     <a id="tabpageHeader1" href="#tabpageBody1" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 tab-pageHeader-a">
-                        <span class="d-none d-sm-inline tab-pageHeader-span-first">
+                        <span class="d-none d-sm-inline tab-pageHeader-span-home">
                         <i class="mdi mdi-home mr-1 tap-icon01"></i>
                         </span>
                     </a>
                 </li>
                 <li class="nav-item tab-header">
-                    <a id="tabpageHeader2" href="#tabpageBody2" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 tab-pageHeader-a">
+                    <a href="#basictab2" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 tab-pageHeader-a">
                         <span class="d-none d-sm-inline tab-pageHeader-span">Profile
                         	<i id="closeTabpage2" class="fe-x tap-icon02" onclick="main.fn_closeTabpasge(this);"></i></span>
                     </a>
                 </li>
-                <li class="nav-item tab-header">
-                    <a id="tabpageHeader3" href="#tabpageBody3" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 tab-pageHeader-a">
+                <li class="nav-item">
+                    <a href="#basictab3" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2 tab-pageHeader-a">
                         <span class="d-none d-sm-inline tab-pageHeader-span">Finish
                         <i id="closeTabpage3" class="fe-x tap-icon02" onclick="main.fn_closeTabpasge(this);"></i></span>
                     </a>
                 </li>
             </ul>
-            <div id="tabContent" class="tab-content mb-0">
+            <div class="tab-content mb-0">
                 <div class="tab-pane" id="tabpageBody1">
-					<tiles:insertAttribute name="dashboard" />
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group row mb-3">
+                                <label class="col-md-3 col-form-label" for="userName">User name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="userName" name="userName" value="Coderthemes">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-md-3 col-form-label" for="password"> Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" id="password" name="password" class="form-control" value="123456789">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-3">
+                                <label class="col-md-3 col-form-label" for="confirm">Re Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" id="confirm" name="confirm" class="form-control" value="123456789">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
                 </div>
-                <div class="tab-pane" id="tabpageBody2">
+
+                <div class="tab-pane" id="basictab2">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group row mb-3">
@@ -71,7 +93,7 @@ $(function () {
                     </div> <!-- end row -->
                 </div>
 
-                <div class="tab-pane" id="tabpageBody3">
+                <div class="tab-pane" id="basictab3">
                     <div class="row">
                         <div class="col-12">
                             <div class="text-center">

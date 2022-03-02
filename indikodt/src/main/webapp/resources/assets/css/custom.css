@@ -18,7 +18,48 @@ background-position: right 5% center;
 }
 /*** .customAfter{content:'';position:absolute;top:50%;right:10px;width:17px;height:17px;margin-top:-9px;border-radius:50%;background-color:#ccc;background-image:url(../images/common/arr_lnb.png);background-repeat:no-repeat;background-position:50% 50%}
 ***/
+.menuCursor
+{
+	cursor: pointer;
+}
+.tab-header
+{
+	display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+}
+.tab-pageHeader-a
+{
+	display: inline-block;
+    position: relative;
+}
+.tab-pageHeader-span-first
+{
+	position: absolute;
+    top: 23%;
+    left: 44%;
+}
+.tab-pageHeader-span
+{
+	position: absolute;
+    top: 21%;
+    left: 39%;
+}
 .tap-icon01
 {
 	display: inline-block;width: 10px;height: 10px;font-size: 20px;line-height: 16px;
+}
+.tap-icon02
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+    float: right;
+    left: 180%;
+    top: 5%;
 }

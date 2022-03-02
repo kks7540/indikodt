@@ -59,7 +59,7 @@ public class systemController{
 		return resultMap;
 
 	}
-	
+
 	/**
 	 * @Title       : afterLogin
 	 * @Description : 로그인 처리
@@ -67,15 +67,15 @@ public class systemController{
 	 * @param response
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/login/afterLogin.do",method = {RequestMethod.POST})
+	@RequestMapping(value = "/main.do",method = {RequestMethod.POST})
 	public String afterLogin(HttpServletRequest request, HttpServletResponse response,@RequestParam Map<String, Object> paramMap, SessionStatus status) throws Exception{
 		logger.info("[Request Mapping] : " + request.getRequestURI());
 		logger.debug("[Request data] : " + paramMap.toString());
-		
+
 		request.getSession().setAttribute("userInfo", paramMap);
 		// 중복 submit방지
 		status.setComplete();
-		
-		return "system/dashBoard.tiles";
+
+		return "system/main";
 	}
 }

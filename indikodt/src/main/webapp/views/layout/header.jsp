@@ -36,8 +36,6 @@
 <script type="text/javascript" src="../../../resources/assets/js/vendor/bootstrap.js"></script>
 <script type="text/javascript" src="../../../resources/assets/js/vendor/popper.js"></script>
 <script type="text/javascript" src="../../../resources/assets/js/app.js"></script>
-
-<script type="text/javascript" src="../../../resources/js/system/main.js"></script>
 <script type="text/javascript" src="../../../resources/js/common/common.js"></script>
    <!-- 외부js -->
 <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>

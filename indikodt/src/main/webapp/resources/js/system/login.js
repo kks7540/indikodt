@@ -1,7 +1,7 @@
 var login = new function() {
 
 	var that = this;
-	
+
 	/**=====================================================
 	| 최초 실행 이벤트
 	*=====================================================*/
@@ -28,11 +28,11 @@ var login = new function() {
 				alert("비밀번호를 입력해주세요.");
 				$('#pw').focus();
 				return;
-			}			
+			}
 			that.login();
 		});
-		
-		
+
+
 	},
 	that.focusDown = function(){
 		$('#pw').focus();
@@ -49,17 +49,17 @@ var login = new function() {
 				alert("현재 서비스가 원할하지 않습니다.\n 잠시후 다시 이용해 주십시요.");
 				return;
 			},
-			success: function(r) { 
+			success: function(r) {
 				if(r.result=="true"){
 					$('#loginFrm').attr('method', 'post');
-					$('#loginFrm').attr('action', Dns + '/login/afterLogin.do');
+					$('#loginFrm').attr('action', Dns + '/main.do');
 					$('#loginFrm').submit();
 				}else{
 					alert(r.message);
 				}
 			}
 		});
-		
+
 	}
 
 };

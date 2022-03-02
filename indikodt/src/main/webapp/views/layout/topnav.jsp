@@ -27,7 +27,7 @@
         </ul>
         <!-- LOGO -->
         <div class="logo-box">
-            <a href="index.html" class="logo_indi">
+            <a href="/system/main.do" class="logo_indi">
                 <span class="logo-lg">
                     <img src="../../resources/assets/images/logo.png" alt="" height="16"> 개인택시 공제조합
                 </span>
@@ -43,7 +43,7 @@
                         <li>
                             <ul>
                                 <li>
-                                    <a href="ui-cards.html">전표등록</a>
+                                    <a id="1100001" class="menuCursor" onclick="main.fn_pageMove(this)">전표등록</a>
                                 </li>
                                 <li>
                                     <a href="ui-draggable-cards.html">일계표 관리</a>
