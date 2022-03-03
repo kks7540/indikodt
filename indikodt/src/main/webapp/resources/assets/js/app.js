@@ -195,14 +195,14 @@ function($) {
     },
     //
     $.Portlet = new Portlet, $.Portlet.Constructor = Portlet
-    
+
 }(window.jQuery),
 
 
 function ($) {
     "use strict";
 
-    var RightSidebar = function () { 
+    var RightSidebar = function () {
         this.$bootstrapStylesheet = $('#bootstrap-stylesheet'),
         this.$appStylesheet = $('#app-stylesheet'),
         this.$originalBSStylesheet = $('#bootstrap-stylesheet').attr('href'),
@@ -284,7 +284,7 @@ function ($) {
         });
     },
 
-    /** 
+    /**
      * Initlizes the menu - top and sidebar
     */
     App.prototype.initMenu = function () {
@@ -346,7 +346,7 @@ function ($) {
 
         $(".navigation-menu a").each(function () {
             var pageUrl = window.location.href.split(/[?#]/)[0];
-            if (this.href == pageUrl) {  
+            if (this.href == pageUrl) {
                 $(this).addClass("active");
                 $(this).parent().addClass("active"); // add active to li of the current link
                 $(this).parent().parent().addClass("in");
@@ -379,7 +379,7 @@ function ($) {
         });
     },
 
-    /** 
+    /**
      * Init the layout - with broad sidebar or compact side bar
     */
     App.prototype.initLayout = function () {

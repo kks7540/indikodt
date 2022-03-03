@@ -11,40 +11,20 @@
 		<put-attribute name="header" value="/views/layout/header.jsp" />
 		<put-attribute name="topnav" value="/views/layout/topnav.jsp" />
 		<put-attribute name="topmenu" value="/views/layout/topmenu.jsp" />
-		<put-attribute name="content4" value="/views/{1}/{2}.jsp" />
 		<put-attribute name="dashboard" value="/views/system/dashBoard.jsp" />
+		<put-attribute name="content" value=""/>
 	</definition>
+
 	<definition name="*/*.tiles" extends="tilesLayout">
-	</definition>
-	<definition name="*/*.tiles.1" extends="tilesLayout">
-		<put-attribute name="content1" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.2" extends="tilesLayout">
-		<put-attribute name="content2" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.3" extends="tilesLayout">
-		<put-attribute name="content3" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.4" extends="tilesLayout">
-		<put-attribute name="content4" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.5" extends="tilesLayout">
-		<put-attribute name="content5" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.6" extends="tilesLayout">
-		<put-attribute name="content6" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.7" extends="tilesLayout">
-		<put-attribute name="content7" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.8" extends="tilesLayout">
-		<put-attribute name="content8" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.9" extends="tilesLayout">
-		<put-attribute name="content9" value="/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*.tiles.10" extends="tilesLayout">
-		<put-attribute name="content10" value="/views/{1}/{2}.jsp" />
-	</definition>
+          <put-attribute name="content" value="/views/{1}/{2}.jsp"></put-attribute>
+    </definition>
+
+	<definition name="noTilesLayout" template="/views/layout/include.jsp">
+        <put-attribute name="NoTilesContent" value=""/>
+    </definition>
+
+	<definition name="*/*/*.jsp" extends="noTilesLayout">
+          <put-attribute name="NoTilesContent" value="/{1}/{2}/{3}.jsp"></put-attribute>
+    </definition>
 
 </tiles-definitions>

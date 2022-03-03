@@ -76,6 +76,6 @@ public class systemController{
 		// 중복 submit방지
 		status.setComplete();
 
-		return "system/main";
+		return "system/main.tiles";
 	}
 }

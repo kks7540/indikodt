@@ -63,3 +63,17 @@ background-position: right 5% center;
     left: 180%;
     top: 5%;
 }
+/*** content css ****/
+.iframe-content{width:100%;height:100%}
+/*** 상단 메뉴 css***/
+.navigation-menu>li.has-submenu:not(:hover)>a{color:#d5e1ee}
+.navigation-menu>li.has-submenu a>.submenu{visibility:hidden;opacity:1;margin-top:0}
+.navigation-menu>li.has-submenu.active>ul.submenu{visibility:visible;opacity:1;margin-top:0}
+.navigation-menu>li:first-of-type>a{margin-left:10px;height: 40px;border-left: 3px solid #ccc;color:#d5e1ee;border-bottom-left-radius:10px}
+.navigation-menu>li:first-of-type>a:hover{margin-left:10px;height: 40px;border-left: 3px solid #ccc;color:#71b6f9;border-bottom-left-radius:10px}
+/***
+.navigation-menu>li:first-of-type>a:focus,.navigation-menu>li:first-of-type>a:hover{background-color:transparent;color:#71b6f9;}
+.navigation-menu>li>ul>li.has-submenu:active>a,.navigation-menu>li>ul>li.has-submenu:hover>a{color:#71b6f9}
+.navigation-menu>li:first-of-type>a{margin-left:10px;height: 40px;border-left: 3px solid #ccc;color:#d5e1ee;border-bottom-left-radius:10px}
+.navigation-menu>li.has-submenu:hover>.submenu{visibility:visible;opacity:1;margin-top:0}
+.navigation-menu>li.has-submenu:hover>.submenu>li.has-submenu:active>.submenu{visibility:visible;opacity:1;margin-left:10px;margin-right:0}***/

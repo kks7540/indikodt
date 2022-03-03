@@ -9,18 +9,28 @@ var main = new function() {
 		/*-------------
 		 | 이벤트 선언.
 		 ------------*/
+		$(".has-submenu").mouseleave(function(obj){
+			$(".navigation-menu").find(".active").removeClass('active');
+		});
 		/*-------------
 		 | 초기값 설정.
 		 ------------*/
 		$("#tabpageHeader1").addClass('active');
 		$("#tabpageBody1").addClass('active');
-
-
+	},
+	/**=====================================================
+	| 상단 메뉴 클릭
+	*=====================================================*/
+	that.fn_subMenuOpen = function(menuId){
+		$(".navigation-menu").find(".active").removeClass('active');
+		$("#"+menuId).parents('li').addClass('active');
 	},
 	/**=====================================================
 	| 탭페이지 이동
 	*=====================================================*/
 	that.fn_pageMove = function(obj){
+
+		$(".navigation-menu").find(".active").removeClass('active');
 
 		let appendStr = "";
 		//menuId = 1100001;
@@ -37,27 +47,14 @@ var main = new function() {
 
 		//tabpageBody 셋팅
 		appendStr = '<div class="tab-pane" id="tabpageBody'+(tabpage.length+1)+'">' +
-			'<tiles:insertAttribute name="content'+(tabpage.length+1)+'" />' +
+			'<iframe src="/views/system/dashBoard.jsp" flush="true" class="iframe-content"/>';
 			'</div>';
-
 		$("#tabContent").append(appendStr);
 
-        $.ajax({
-		 	url: '/system/main_back.do',
-		 	async:false,
-		    data: {"tabpageNo":(tabpage.length+1)},
-		    type: 'POST',
-		    success:function(data){
-
-		    	$("#tabpages").find(".active").removeClass('active');
-		    	$("#tabContent").find(".active").removeClass('active');
-				$("#tabPageHeader"+(tabpage.length+1)).addClass('active');
-				$("#tabpageBody"+(tabpage.length+1)).addClass('active');
-		    },
-		    error:function(request,status,error){
-		        alert("code = "+ request.status + " message = " + request.responseText + " error = " + error); // 실패 시 처리
-		    }
-         });
+    	$("#tabpages").find(".active").removeClass('active');
+    	$("#tabContent").find(".active").removeClass('active');
+		$("#tabPageHeader"+(tabpage.length+1)).addClass('active');
+		$("#tabpageBody"+(tabpage.length+1)).addClass('active');
 
 	},
 	/**=====================================================

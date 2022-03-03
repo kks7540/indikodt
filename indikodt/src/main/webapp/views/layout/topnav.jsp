@@ -38,12 +38,12 @@
             <!-- Navigation Menu-->
             <ul id="topMenuUl" class="navigation-menu">
                 <li class="has-submenu">
-                    <a href="#"> 일일관리  <div class="arrow-down"></div></a>
+                    <a id="1000000" href="#" onclick="main.fn_subMenuOpen('1000000')" class=""> 일일관리  <div class="arrow-down"></div></a>
                     <ul class="submenu">
                         <li>
                             <ul>
                                 <li>
-                                    <a id="1100001" class="menuCursor" onclick="main.fn_pageMove(this)">전표등록</a>
+                                    <a id="1000001" class="menuCursor" onclick="main.fn_pageMove(this)">전표등록</a>
                                 </li>
                                 <li>
                                     <a href="ui-draggable-cards.html">일계표 관리</a>
@@ -53,7 +53,7 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="#"> 원장관리 <div class="arrow-down"></div></a>
+                    <a id="1100000" href="#" onclick="main.fn_subMenuOpen('1100000')" class=""> 원장관리 <div class="arrow-down"></div></a>
                     <ul class="submenu">
                         <li>
                             <ul>

@@ -52,13 +52,10 @@ public class systemView{
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/system/main_back.do",method={RequestMethod.POST})
+	@RequestMapping(value = "/system/main_back.do",method={RequestMethod.GET})
 	public String main_back(HttpServletRequest request, HttpServletResponse response, @RequestParam Map<String, Object> paramMap) {
 		logger.info("[ main view open ]");
-		System.out.println(request.getParameter("tabpageNo"));
-		System.out.println(String.valueOf(paramMap.get("tabpageNo")));
-		String tabPage = String.valueOf(paramMap.get("tabpageNo"));
-		return "system/dashBoard.tiles."+tabPage;
+		return "system/dashBoard.jsp";
 	}
 
 }
